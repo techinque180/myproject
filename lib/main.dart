@@ -47,12 +47,24 @@ class _foodallState extends State<foodall> {
               child: FlatButton(
                 textColor: Colors.white,
                 color: Colors.orange[700],
-                child: Text(
-                  '隨機食物',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30.0,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Image(
+                      height: 50,
+                      width: 50,
+                      image: AssetImage('images/food.png'),
+                    ),
+                    Text(
+                      ' 隨機食物',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30.0,
+                      ),
+                    ),
+                  ],
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -73,12 +85,24 @@ class _foodallState extends State<foodall> {
               child: FlatButton(
                 textColor: Colors.white,
                 color: Colors.orange[900],
-                child: Text(
-                  '均衡飲食',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30.0,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Image(
+                      height: 50,
+                      width: 50,
+                      image: AssetImage('images/diet.png'),
+                    ),
+                    Text(
+                      ' 均衡飲食',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30.0,
+                      ),
+                    ),
+                  ],
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -97,12 +121,24 @@ class _foodallState extends State<foodall> {
               padding: EdgeInsets.all(15.0),
               child: FlatButton(
                 color: Colors.red[800],
-                child: Text(
-                  '轉盤',
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    color: Colors.white,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Image(
+                      height: 50,
+                      width: 50,
+                      image: AssetImage('images/dial.png'),
+                    ),
+                    Text(
+                      ' 轉盤',
+                      style: TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -353,9 +389,17 @@ class _food1State extends State<food1> {
     return Column(
       children: <Widget>[
         Container(
+          margin: EdgeInsets.only(left: 80, top: 190, right: 70, bottom: 0),
+          child: Image(
+            height: 100,
+            width: 100,
+            image: AssetImage('images/breakfast.png'),
+          ),
+        ),
+        Container(
           width: 250,
           height: 100,
-          margin: EdgeInsets.only(left: 95, top: 210, right: 70, bottom: 100),
+          margin: EdgeInsets.only(left: 120, top: 10, right: 60, bottom: 50),
           child: Text(
             '食物：$food',
             style: TextStyle(
@@ -448,10 +492,22 @@ class _food2State extends State<food2> {
     '炒芥菜',
     '番茄炒蛋'
   ];
-  List c = ['菜甫蛋', '蛤蜊絲瓜','宮保皮蛋','麻婆豆腐',
-            '薑絲大腸','蝦仁煎蛋','滑蛋蝦仁','鹹蛋苦瓜',
-            '醬爆茄子','蒸蛋','螞蟻上樹','荷包蛋',
-            '麻辣鴨血','蘆筍沙拉'];
+  List c = [
+    '菜甫蛋',
+    '蛤蜊絲瓜',
+    '宮保皮蛋',
+    '麻婆豆腐',
+    '薑絲大腸',
+    '蝦仁煎蛋',
+    '滑蛋蝦仁',
+    '鹹蛋苦瓜',
+    '醬爆茄子',
+    '蒸蛋',
+    '螞蟻上樹',
+    '荷包蛋',
+    '麻辣鴨血',
+    '蘆筍沙拉'
+  ];
   List d = [
     '玉米濃湯',
     '貢丸湯',
@@ -494,9 +550,17 @@ class _food2State extends State<food2> {
     return Column(
       children: <Widget>[
         Container(
+          margin: EdgeInsets.only(left: 80, top: 140, right: 70, bottom: 0),
+          child: Image(
+            height: 100,
+            width: 100,
+            image: AssetImage('images/salad.png'),
+          ),
+        ),
+        Container(
           width: 300,
           height: 50,
-          margin: EdgeInsets.only(left: 90, top: 190, right: 90),
+          margin: EdgeInsets.only(left: 90, top: 30, right: 90),
           child: Text(
             '主食：$mainfood',
             style: TextStyle(
@@ -532,7 +596,7 @@ class _food2State extends State<food2> {
         Container(
           width: 300,
           height: 50,
-          margin: EdgeInsets.only(left: 100, top: 0, right: 90, bottom: 100),
+          margin: EdgeInsets.only(left: 100, top: 0, right: 90, bottom: 60),
           child: Text(
             ' 湯：$soup',
             style: TextStyle(
@@ -540,7 +604,7 @@ class _food2State extends State<food2> {
               fontSize: 30.0,
             ),
           ),
-        ),//
+        ), //
         Container(
           width: 80,
           height: 60,
@@ -597,9 +661,17 @@ class _food3State extends State<food3> {
     return Column(
       children: <Widget>[
         Container(
+          margin: EdgeInsets.only(left: 80, top: 60, right: 70, bottom: 20),
+          child: Image(
+            height: 150,
+            width: 150,
+            image: AssetImage('images/restaurant.png'),
+          ),
+        ),
+        Container(
           width: 250,
           height: 30,
-          margin: EdgeInsets.only(left: 0, top: 210, right: 70, bottom: 0),
+          margin: EdgeInsets.only(left: 0, top: 30, right: 70, bottom: 0),
           child: Text(
             '請輸入人數',
             style: TextStyle(
@@ -609,7 +681,7 @@ class _food3State extends State<food3> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: 40, right: 30, top: 30, bottom: 20),
+          margin: EdgeInsets.only(left: 40, right: 30, top: 20, bottom: 20),
           child: Column(
             children: <Widget>[
               TextField(
@@ -678,9 +750,17 @@ class _food4State extends State<food4> {
     return Column(
       children: <Widget>[
         Container(
+          margin: EdgeInsets.only(left: 80, top: 60, right: 70, bottom: 20),
+          child: Image(
+            height: 150,
+            width: 150,
+            image: AssetImage('images/chinese.png'),
+          ),
+        ),
+        Container(
           width: 250,
           height: 30,
-          margin: EdgeInsets.only(left: 0, top: 210, right: 70, bottom: 0),
+          margin: EdgeInsets.only(left: 0, top: 30, right: 70),
           child: Text(
             '請輸入第$n個食物',
             style: TextStyle(
@@ -690,7 +770,7 @@ class _food4State extends State<food4> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: 40, top: 30, right: 30, bottom: 0),
+          margin: EdgeInsets.only(left: 40, top: 30, right: 30 ),
           child: Column(
             children: <Widget>[
               TextField(
@@ -733,9 +813,17 @@ class _food5State extends State<food5> {
     return Column(
       children: <Widget>[
         Container(
+          margin: EdgeInsets.only(left: 80, top: 150, right: 70, bottom: 20),
+          child: Image(
+            height: 150,
+            width: 150,
+            image: AssetImage('images/tom-yum-goong.png'),
+          ),
+        ),
+        Container(
           width: 250,
           height: 50,
-          margin: EdgeInsets.only(left: 105, top: 210, right: 70, bottom: 0),
+          margin: EdgeInsets.only(left: 105, top: 50, right: 70, bottom: 0),
           child: Text(
             '轉盤隨機結果：',
             style: TextStyle(
