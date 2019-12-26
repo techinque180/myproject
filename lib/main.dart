@@ -540,7 +540,7 @@ class _food2State extends State<food2> {
               fontSize: 30.0,
             ),
           ),
-        ),
+        ),//
         Container(
           width: 80,
           height: 60,
