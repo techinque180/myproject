@@ -731,8 +731,11 @@ class _food4State extends State<food4> {
     setState(() {
       if (n <= num) {
         food.insert(n - 1, myController.text);
-        n = n + 1;
-        if(n > num) {
+        if(n != num)
+        {
+            n = n + 1;
+        }
+        else if(n == num) {
           num2 = random.nextInt(num);
           changefood = food[num2];
           Navigator.push(
