@@ -729,16 +729,17 @@ class _food4State extends State<food4> {
   var num2;
   void btnEvent() {
     setState(() {
-      if (n < num) {
+      if (n <= num) {
         food.insert(n - 1, myController.text);
         n = n + 1;
-      } else {
-        num2 = random.nextInt(num);
-        changefood = food[num2];
-        Navigator.push(
-          context,
-          new MaterialPageRoute(builder: (context) => new screen5()),
-        );
+        if(n > num) {
+          num2 = random.nextInt(num);
+          changefood = food[num2];
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new screen5()),
+          );
+        }
       }
     });
 
